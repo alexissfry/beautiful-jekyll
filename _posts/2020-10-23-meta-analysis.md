@@ -2,7 +2,7 @@
 #Frontmatter
 layout: post
 title: Meta-Analysis of Research
-subtitle: Pride, Love, and Twitter Rants: Combining Machine Learning and Qualitative Techniques to Understand What Our Tweets Reveal about Race in the US
+subtitle: Pride, Love, and Twitter Rants 
 ---
 
 # Description 
