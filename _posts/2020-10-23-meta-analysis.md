@@ -4,11 +4,10 @@ layout: post
 title: Meta-Analysis of Research
 ---
 
-# Description & Method 
+# Description 
 I read [Pride, Love, and Twitter Rants: Combining Machine Learning and Qualitative Techniques to Understand What Our Tweets Reveal about Race in the US](https://www.researchgate.net/publication/333231572_Pride_Love_and_Twitter_Rants_Combining_Machine_Learning_and_Qualitative_Techniques_to_Understand_What_Our_Tweets_Reveal_about_Race_in_the_US) published by the International Journal of Environmental Research and Public Health.  The objective of this study is to "describe variation in sentiment of tweets using race-related terms and identify themes charactarizing the social climate related to race". The researchers applied a Stochastic Gradient Descent Classifier, which is an optimization technique that can be used to train machine learning models. In this case, researchers used this method to do a sentiment analysis of 1,249,653 US tweets using race-related terms from 2015 to 2016. To ensure accuracy, a random subset of 6600 tweets were given manual sentiment labels and those labels were compared against computer sentiment labels, acknowledging the subjectivity and spectrum of human sentiment.
 
 # Data 
-
 #### Which properties are being tracked?
 From March 2015-April 2016, researchers used Twitter's API (Streaming Application Programming Interface) to access a random subset of ~1.25 million tweets. Labeled tweets from Sanders Analytics (5513 tweets) and Kaggle (7086 tweets) and emotions dervied from Sentiment140 were used to train the algorithm researchers used for sentiment analysis. The computer algorithm then categorized the sentiment of the tweets as "positive" or "negative/neutral". Based off of race-related language used in the tweet, they were grouped further into four main racial/ethnic categories: Black, Hispanic, Asian, and Middle Eastern. 
 
@@ -24,15 +23,16 @@ A society in which greater hosilities towards minorities occur has been happenin
 #### How was this data collected?
 To prepare the dataset, each tweet was divided into tokens, which roughly corresponded to words, by the Stanford Tokenizer. To conduct sentiment analysis on the tweets, researchers used the Stochastic Gradient Descent Classifier (SGD). Additionally, preprocessing was done to remove inconsquential variation and to allow the model to focus on the tweet itself. Preprocessing steps included removing stop words (ex: the, is, a), additional white space, punctuations, hashtags, URLs, and usernames. All characters were converted to lowercase. The researchers trained sentiment analysis algorithm then categorized tweets as "positive" or "negative/neutral" from the total final sample of ~1.25 million tweets. Then, tweets were grouped into four racial/ethic categories, Black, Hispanic, Asian, and Middle Eastern, according to certain words that were contained in the tweets themselves. 
 
- #### Who is funding the collection of this data?
+#### Who is funding the collection of this data?
 Although its unclear who funded this study, professors from University of California San Francisco, Furman University, UC Berkeley, Harvard, University of Maryland, and DePaul University collaborated and published this research together. 
 
- #### How accessible is this dataset?
+#### How accessible is this dataset?
 This dataset is accessible as it is open to the public through Research Gate.
 
 # Results 
-
+Agreement between computer labels and manually generated labels was 74%. Of the 1,249,653 tweets containing at least one of the relevant keywords pertaining to a racial or ethnic minority group, 620,000 tweets were about Blacks, 205,000 about Hispanics, 270,000 about Asians, and 60,000 about Middle Eastern groups. From a list of 398 race-related terms the researches trained the algorithm to search for, only 20 of these terms were necessary to categorize 84% of tweets containing said terms. Across the United States, tweets referencing Asians (17.7%) and Hispanics (17.5%) had the highest percentage of positive sentiment. Tweets that referenced Middle Eastern groups had the lowest positive sentiment (12.5%) followed by tweets that reference Blacks (13.8%). However, only aroud 6% tweets containing race-related terms used discriminatory or stereotyping language. 
 
 # Analysis 
-#Trust
-#Publish or Perish
+Although I found the concept of this study intriguing, I don't believe that the results are very conclusive due to several factors. First, I see some issues embedded within the study's method. Researchers only collected tweets from 2015 to 2016. If the study is truly trying to capture "social environment" through their analysis, they can only do so within the time alloted. Their results cannot be applied generally, because the variation of social climate might trigger an uptick in certain sentiment. For example, with BLM happening right now, I'm sure there's more discussion surrounding race than ever before. Our political/social climate isn't constant. Second, since natural language processing is in its early stages (although its SUPER COOL), the sentiment analysis is just too objective to capture the true meaning of the tweets the study is trying to analyze. Additionally, Twitter does not require users to report their age, sex, gender, or location. Relatively recently, minority groups have decided to take ownership of anf re-appropriate derogatory terms that target their identity. So, when considering sentiment analysis, that use of derogatory language might draw incorrect results. I hope natural language processing advances, so sentiment analysis is not quantified on a 0 to 1 scale. I believe IBM Watson's sentiment analysis interprets sentiment on a wider spectrum. 
+
+When considering the concept of publish or perish, I do think this study published results that weren't very meaningful. Positive sentiment for each racial group was within 10%-20% so that the only differences in sentiment varied by less than 10%. Further, only 6% of the tweets contained race-related terms used discriminatory or stereotyping language, which is a murkey claim itself drawing from my earlier claim about discriminatory or stereotyping language. Although the researchers claim that the sentiment labels they gave and the computer assigned are 74% accurate, then you're also forced to consider the subjectivity of the sentiment labels the researchers gave which are based on their subjectivity. To me, it seems that this claim is trying to cover up the pretty weak data they had to conclude the study with.  
