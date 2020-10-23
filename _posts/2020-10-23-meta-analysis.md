@@ -9,7 +9,7 @@ I read [Pride, Love, and Twitter Rants: Combining Machine Learning and Qualitati
 
 # Data 
 
-## Which properties are being tracked?
+### Which properties are being tracked?
 From March 2015-April 2016, researchers used Twitter's API (Streaming Application Programming Interface) to access a random subset of ~1.25 million tweets. Labeled tweets from Sanders Analytics (5513 tweets) and Kaggle (7086 tweets) and emotions dervied from Sentiment140 were used to train the algorithm researchers used for sentiment analysis. The computer algorithm then categorized the sentiment of the tweets as "positive" or "negative/neutral". Based off of race-related language used in the tweet, they were grouped further into four main racial/ethnic categories: Black, Hispanic, Asian, and Middle Eastern. 
 
 ## Which properties are being left out?
