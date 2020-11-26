@@ -30,7 +30,7 @@ Group 2 (control): Do not use Google Health and provide medical help once the in
 The treatment would be assigned randomly.
 
 #### Briefly discuss how the experiment would be conducted.
-After the sample frame and sampling method is gathered and executed, then I would create group 1 and group 2 amongst members of my sampling frame. After the data is collected, I would look at Google Health's accuracy in identifying patients with acute kidney injury. Further, I would look at the kidney heath of patients from both groups and compare.  
+After the sample frame and sampling method is gathered and executed, then I would create group 1 and group 2 amongst members of my sampling frame. After the data is collected, I would look at Google Health's accuracy in identifying patients with acute kidney injury. Further, I would look at the kidney heath of patients from both groups and compare. To do so, I would research symptoms of kidney disease and examine each patient to see if they have the corresponding symptoms.
 
 #### What biases may come up, and how would you address them?
 Limiting the sample frame to NYC might allow for bias. I am not completely sure if the NYC population might have access to resources that would weaken their kidney health more than other areas in the world. Additionaly, there might be bias in Google Heath's AI. Since I'm not sure how exactly that system operates, it is likely that some data that it uses to make predictions is skewed as humans often skew data and that data is used to build the system's ability to make predictions. 
