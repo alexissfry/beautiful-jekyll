@@ -39,7 +39,7 @@ with open('hospital_raw.csv', 'w', newline = '') as f:
         writing.writerow(row)
 
 #standardizing measurements by changing measure to 1HAB and adjusting beds accordingly
-def standardize(list):
+def unitize(list):
     measure = int(list[4][:len(list[4])-3])
     list[5] = float(list[5])/measure
     list[4] = "1HAB"
@@ -52,8 +52,8 @@ with open('hospital_lab.csv', 'w', newline = '') as f:
     for i in range(1,135):
         string = getRow(i)
         row = rewrite(string)
-        standardized_row = standardize(row)
-        writing.writerow(standardized_row)
+        unitized = unitize(row)
+        writing.writerow(unitized)
 
 #open hospital_lab.csv, organizing data by county (no matter the bed type), creating a dictionary for each country
 counties = {}
@@ -88,4 +88,4 @@ for i in counties:
     if counties[i][len(counties[i])-1] == maximum:
         county = i
 
-print("County with the most hospital beds per person: " + county)  
+print("New York county with the most hospital beds per person: " + county)  
