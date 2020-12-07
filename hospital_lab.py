@@ -30,7 +30,7 @@ def rewrite(string):
     line.append(string[index:])
     return line
 
-#standardize measure by changing measure to 1HAB and adjust beds accordingly
+#standardizing measurements by changing measure to 1HAB and adjusting beds accordingly
 def standardize(list):
     measure = int(list[4][:len(list[4])-3])
     list[5] = float(list[5])/measure
@@ -39,25 +39,24 @@ def standardize(list):
 
 #getting the data from the API and writing it into a csv I called hospital_raw.csv
 with open('hospital_raw.csv', 'w', newline = '') as f:
-    thewriter = csv.writer(f)
+    writing = csv.writer(f)
     for i in range(0,135):
         string = getData(i)
         row = rewrite(string)
-        thewriter.writerow(row)
+        writing.writerow(row)
         
 #get all the standardized data and write into hospital_lab.csv       
 with open('hospital_lab.csv', 'w', newline = '') as f:
-    thewriter = csv.writer(f)
-    thewriter.writerow(rewrite(getData(0)))
+    writing = csv.writer(f)
+    writing.writerow(rewrite(getData(0)))
     for i in range(1,135):
         string = getData(i)
         row = rewrite(string)
         standardized_row = standardize(row)
-        thewriter.writerow(standardized_row)
-
+        writing.writerow(standardized_row)
 
 #open hospital_lab.csv
-county_list = {}
+counties = {}
 with open("hospital_lab.csv", "r") as f:
     data = csv.reader(f)
     next(data)
@@ -65,23 +64,30 @@ with open("hospital_lab.csv", "r") as f:
         #organize data by county, regardless of bed type
         county = row[2]
         #create dictionary for new county
-        if county not in county_list:
-            county_list[county] = []
-        county_list[county].append(row[5])
+        if county not in counties:
+            counties[county] = []
+        counties[county].append(row[5])
 
+#creating to sum list
+def summation(list):
+    a = 0
+    for i in list:
+        a = a + float(i)
+    return a
 
 #create a list with the sum of beds/person for each county
-bed_sum = []
-for i in county_list:
-    s = sum(int(county_list[i]))
-    county_list[i].append(s)
-    bed_sum.append(s)
+beds = []
+for i in counties:
+    a = summation(counties[i])
+    counties[i].append(a)
+    bed_sum.append(a)
 
 
 #find max and print result
-maximum = max(bed_sum)
+maximum = max(beds)
 county = ""
-for i in county_list:
-    if county_list[i][len(county_list[i])-1] == maximum:
+for i in counties:
+    if counties[i][len(counties[i])-1] == maximum:
         county = i
-print(county + " county has the most hospital beds per person")  
+
+print("County with the most hospital beds per person: " + county)  
