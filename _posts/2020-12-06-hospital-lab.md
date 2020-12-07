@@ -45,4 +45,4 @@ US,NY,wayne,ACUTE,1000HAB,1.312307,91442,2018
 I ended up finding that New York county has the most hospital beds per person. Not surprising :( (but I guess this data is from 2018/2019)
 
 ### Logistics 
-In terms of who I worked with, I worked through code and errors in a breakout room with Alex, David, Lucca, and Ethan on Thursday. I asked Harry questions and checked my final answer for the county with the most hospital beds with him as well. I answered a few of Aidan's questions about creating the csv file.
+In terms of who I worked with, I worked through code and errors in a breakout room with Alex, David, Lucca, and Ethan on Thursday. I asked Harry questions and checked my final answer for the county with the most hospital beds with him as well. I answered a few of Aidan's questions about creating the csv file. During this lab, I learned alot about trial and error with APIs, and I improved my ability to clean and standarize data and how to then analyze it by rearranging the data into structures that will be easy to analyze given the overarching targetpoint.
