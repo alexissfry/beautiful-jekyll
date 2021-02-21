@@ -13,7 +13,7 @@ First, I wanted to do some initial analysis by using the .describe() in the seab
 country_vaccinations[['daily_vaccinations']].describe()
 ```
 I decided to do analysis on the daily_vaccinations variable. Below are the summary of the statistics for daily_vaccinations:
-![statistics](statistics.png)
+![statistics](alexissfry.github.io/assets/img/statistics.png)
 
 I then used this data to create a histogram, plotting count or frequency versus daily vaccinations.
 ![graph 1](daily_vacc_hist.png)
