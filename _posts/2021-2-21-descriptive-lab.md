@@ -4,10 +4,10 @@ layout: post
 title: Descriptive Lab
 ---
 
-1. Dataset Used
+### Dataset Used
 I am using the country vaccinations dataset.
 
-2. Dataset Analysis & Conclusions 
+### Dataset Analysis & Conclusions 
 First, I wanted to do some initial analysis by using the .describe() in the seaborn library.
 ```
 country_vaccinations[['daily_vaccinations']].describe()
